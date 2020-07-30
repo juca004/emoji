@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dibujo</title>
+    <link rel="stylesheet" href="emoji.css">
+  </head>
+  <body>
+    <h1>Emoji cambia de color el rostro con los botones y canales de RGB</h1>
+    <div>
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <circle cx="200" cy="200" r="198"/>
+        <circle cx="120" cy="130" r="50"/>
+        <circle cx="280" cy="130" r="50"/>
+        <circle cx="23" cy="130" r="15">
+            <animate id="ida"
+                     attributeType="XML"
+                     attributeName="cx"
+                     from="150"
+                     to="90"
+                     dur="1s"
+                     begin="0s;vuelta.end"/>
+            <animate id="vuelta"
+                     attributeType="XML"
+                     attributeName="cx"
+                     from="90"
+                     to="150"
+                     dur="1s"
+                     begin="ida.end"/>
+          </circle >
+          <circle cx="23" cy="130" r="15">
+            <animate id="ida"
+                     attributeType="XML"
+                     attributeName="cx"
+                     from="310"
+                     to="250"
+                     dur="1s"
+                     begin="0s; vuelta.end"/>
+            <animate id="vuelta"
+                     attributeType="XML"
+                     attributeName="cx"
+                     from="250"
+                     to="310"
+                     dur="1s"
+                     begin="ida.end"/>
+          </circle>
+        <line x1="80" y1="60" x2="175" y2="75"/>
+        <line x1="225" y1="75" x2="315" y2="60"/>
+        <ellipse cx="200" cy="265" rx="100" ry="50">
+            <animate attributeName="rx"
+                    dur="4s"
+                    values="50; 110; 50"
+                    repeatCount="indefinite"/>
+        </ellipse>
+      </svg>
+    </div>
+    <div>
+      <div class="">
+        <progress value="0" max="255">R</progress>
+        <input type="button" name="mas" value="mas">
+        <input type="button" name="menos" value="menos">
+        <label for="">R</label>
+      </div>
+      <div class="">
+        <progress value="0" max="255">G</progress>
+        <input type="button" name="mas" value="mas">
+        <input type="button" name="menos" value="menos">
+        <label for="">G</label>
+      </div>
+      <div class="">
+        <progress value="0" max="255">B</progress>
+        <input type="button" name="mas" value="mas">
+        <input type="button" name="menos" value="menos">
+        <label for="">B</label>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="emoji.js"></script>
+</html>
